@@ -2,7 +2,8 @@
 
 UInt Factorial::Run(UInt n)
 {
-    if (n == 0)
-        return 1;
-    return n * Run(n - 1);
+    UInt result = 1;
+    for (UInt i = 1; i <= n; i++)
+        result *= i;
+    return result;
 }

@@ -37,8 +37,8 @@ void Menu::UIntMenu()
 		std::cout << "0 -> EXIT" << std::endl;
 		std::cout << "1 -> Sum between 2 numbers" << std::endl;
 		std::cout << "2 -> Sum of all numbers in given interval [a, b)" << std::endl;
-		std::cout << "3 -> Multiplication between 2 numbers" << std::endl;
-		std::cout << "4 -> Multiplication of all numbers in given interval [a, b)" << std::endl;
+		std::cout << "3 -> Product between 2 numbers" << std::endl;
+		std::cout << "4 -> Product of all numbers in given interval [a, b)" << std::endl;
 		std::cout << "5 -> n!" << std::endl;
 		std::cout << "6 -> Difference between 2 numbers" << std::endl;
 		std::cout << "7 -> Comparison of 2 numbers" << std::endl;
@@ -79,7 +79,17 @@ void Menu::UIntMenu()
 		}
 			break;
 		case 4:
-			break;
+		{
+			UInt a, b;
+			std::cout << "a = "; std::cin >> a;
+			std::cout << "b = "; std::cin >> b;
+
+			BENCHMARKING();
+			UInt prod = 1;
+			for (UInt i = a; i < b; i++)
+				prod *= i;
+			std::cout << "Product of all numbers in given interval [" << a << ", " << b << ") = " << prod << std::endl;
+		} break;
 		case 5:
 		{
 			UInt n;

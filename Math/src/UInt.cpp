@@ -236,7 +236,7 @@ UInt UInt::Karatsuba(const UInt& a, const UInt& b)
 	if (a == 1) return b;
 	if (b == 1) return a;
 
-	if (a.m_Digits.size() < 10 && b.m_Digits.size() < 10)
+	if (a.m_Digits.size() < 70 && b.m_Digits.size() < 70)
 	{
 		return LongMultiplication(a, b);
 	}
