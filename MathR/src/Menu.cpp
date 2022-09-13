@@ -1,5 +1,5 @@
 #include "Menu.h"
-#include "Int.h"
+#include "UInt.h"
 #include "Benchmarking.h"
 #include "Alghoritm/Factorial.h"
 
